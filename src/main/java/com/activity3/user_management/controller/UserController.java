@@ -28,6 +28,7 @@ public class UserController {
     @GetMapping("/")
     public String home(Model model) {
         log.info("Entering home().");
+        log.info("This was an automatic deployment!");
         model.addAttribute("users", userRepository.findAll());
         log.info("Exiting home().");
         return "user-list";
